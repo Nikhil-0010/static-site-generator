@@ -9,8 +9,8 @@ def main():
     if len(sys.argv) > 1:
         basepath = sys.argv[1]
     
-    source_to_dest("static", "public")
-    generate_pages_recursive("content","template.html","public", basepath)
+    source_to_dest("static", "docs")
+    generate_pages_recursive("content","template.html","docs", basepath)
 
 def source_to_dest(source="static",dest="public"):
     if not os.path.exists(source):
